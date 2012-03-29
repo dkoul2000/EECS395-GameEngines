@@ -79,9 +79,15 @@ namespace WindowsGame1
             }
 
             if (Keyboard.GetState().IsKeyDown(Keys.Up))
+            {
                 shipPosition.X += 1f;
+                shipPosition.Y += 1f;
+            }
             if (Keyboard.GetState().IsKeyDown(Keys.Down))
+            {
                 shipPosition.X -= 1f;
+                shipPosition.Y -= 1f;
+            }
 
             base.Update(gameTime);
         }
