@@ -19,10 +19,16 @@ namespace QuickstartProject
     /// <summary>
     /// This is the main type for your game
     /// </summary>
+    
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        
+        Vector2 shipPosition = new Vector2(0, 0);
+        Vector2 sunPosition = new Vector2(2, 10);
+        Texture2D shipTexture;
+        Texture2D sunTexture;
 
         public Game1()
         {
@@ -51,6 +57,9 @@ namespace QuickstartProject
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            shipTexture = this.Content.Load<Texture2D>("Ship.png");
+            sunTexture = this.Content.Load<Texture2D>("Sun.png");
 
             // TODO: use this.Content to load your game content here
         }
@@ -89,6 +98,11 @@ namespace QuickstartProject
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+
+            spriteBatch.Begin();
+            spriteBatch.Draw(shipTexture, shipPosition, Color.White);
+            spriteBatch.Draw(sunTexture, sunPosition, Color.White);
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
