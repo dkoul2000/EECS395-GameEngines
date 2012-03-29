@@ -1,6 +1,0 @@
-C:\Users\Dhruv\Desktop\EECS395-GameEngines\Quickstart\QuickstartProject\QuickstartProject\QuickstartProject\bin\x86\Debug\QuickstartProject.exe
-C:\Users\Dhruv\Desktop\EECS395-GameEngines\Quickstart\QuickstartProject\QuickstartProject\QuickstartProject\bin\x86\Debug\QuickstartProject.pdb
-C:\Users\Dhruv\Desktop\EECS395-GameEngines\Quickstart\QuickstartProject\QuickstartProject\QuickstartProject\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Dhruv\Desktop\EECS395-GameEngines\Quickstart\QuickstartProject\QuickstartProject\QuickstartProject\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\Dhruv\Desktop\EECS395-GameEngines\Quickstart\QuickstartProject\QuickstartProject\QuickstartProject\obj\x86\Debug\QuickstartProject.exe
-C:\Users\Dhruv\Desktop\EECS395-GameEngines\Quickstart\QuickstartProject\QuickstartProject\QuickstartProject\obj\x86\Debug\QuickstartProject.pdb
