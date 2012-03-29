@@ -51,11 +51,32 @@ namespace WindowsGame1
 
         }
 
+        float rotationAngle = 0.0f;
+
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
+            if (Keyboard.GetState().IsKeyDown(Keys.Escape))
+                this.Exit();
+
+            //ship rotates left or right
+            if (Keyboard.GetState().IsKeyDown(Keys.Right))
+            {
+                float elapsedTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
+                rotationAngle += elapsedTime;
+                float circle = MathHelper.Pi * 2;
+                rotationAngle = rotationAngle % circle;
+            }
+
+            if (Keyboard.GetState().IsKeyDown(Keys.Left))
+            {
+                float elapsedTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
+                rotationAngle -= elapsedTime;
+                float circle = MathHelper.Pi * 2;
+                rotationAngle = rotationAngle % circle;
+            }
 
             base.Update(gameTime);
         }
@@ -66,7 +87,8 @@ namespace WindowsGame1
 
             //draw sprites on screen
             spriteBatch.Begin();
-            spriteBatch.Draw(shipTexture, shipPosition, Color.White);
+            spriteBatch.Draw(shipTexture, shipPosition, null, Color.White, rotationAngle, new Vector2(0, 0),
+                1.0f, SpriteEffects.None, 0f);
             spriteBatch.Draw(sunTexture, sunPosition, Color.White);
             spriteBatch.End();
 
