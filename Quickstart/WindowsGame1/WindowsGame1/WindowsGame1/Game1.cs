@@ -78,15 +78,17 @@ namespace WindowsGame1
                 rotationAngle = rotationAngle % circle;
             }
 
+            Vector2 shipFacingUnit = new Vector2((float)Math.Cos(rotationAngle), (float)Math.Sin(rotationAngle));
+
             if (Keyboard.GetState().IsKeyDown(Keys.Up))
             {
-                shipPosition.X += 1f;
-                shipPosition.Y += 1f;
+                shipPosition.X += shipFacingUnit.X;
+                shipPosition.Y += shipFacingUnit.Y;
             }
             if (Keyboard.GetState().IsKeyDown(Keys.Down))
             {
-                shipPosition.X -= 1f;
-                shipPosition.Y -= 1f;
+                shipPosition.X -= shipFacingUnit.X;
+                shipPosition.Y -= shipFacingUnit.Y;
             }
 
             base.Update(gameTime);
@@ -94,7 +96,7 @@ namespace WindowsGame1
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.MidnightBlue);
 
             //draw sprites on screen
             spriteBatch.Begin();
