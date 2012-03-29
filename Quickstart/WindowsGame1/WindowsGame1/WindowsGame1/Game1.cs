@@ -1,3 +1,7 @@
+//Dhruv Koul and Khalid Aziz
+//Quickstart XNA project
+//EECS 395 - Spring 2012
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +20,7 @@ namespace WindowsGame1
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        //objects used for sprites - vectors for position and textures for images
         Vector2 shipPosition = new Vector2(200, 200);
         Vector2 sunPosition = new Vector2(40, 90);
         Texture2D shipTexture, sunTexture;
@@ -28,34 +33,29 @@ namespace WindowsGame1
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
-            // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            //loaded from images folder
             shipTexture = Content.Load<Texture2D>("images/Ship");
             sunTexture = Content.Load<Texture2D>("images/Sun");
 
-            // TODO: use this.Content to load your game content here
         }
 
         protected override void UnloadContent()
         {
-            // TODO: Unload any non ContentManager content here
+
         }
 
         protected override void Update(GameTime gameTime)
         {
-            // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            // TODO: Add your update logic here
 
             base.Update(gameTime);
         }
@@ -64,7 +64,7 @@ namespace WindowsGame1
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            //draw sprites on screen
             spriteBatch.Begin();
             spriteBatch.Draw(shipTexture, shipPosition, Color.White);
             spriteBatch.Draw(sunTexture, sunPosition, Color.White);
