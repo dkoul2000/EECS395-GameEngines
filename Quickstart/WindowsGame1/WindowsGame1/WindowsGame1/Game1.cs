@@ -16,6 +16,10 @@ namespace WindowsGame1
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        Vector2 shipPosition = new Vector2(200, 200);
+        Vector2 sunPosition = new Vector2(40, 90);
+        Texture2D shipTexture, sunTexture;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -33,6 +37,9 @@ namespace WindowsGame1
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            shipTexture = Content.Load<Texture2D>("images/Ship");
+            sunTexture = Content.Load<Texture2D>("images/Sun");
 
             // TODO: use this.Content to load your game content here
         }
@@ -58,6 +65,10 @@ namespace WindowsGame1
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+            spriteBatch.Begin();
+            spriteBatch.Draw(shipTexture, shipPosition, Color.White);
+            spriteBatch.Draw(sunTexture, sunPosition, Color.White);
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
