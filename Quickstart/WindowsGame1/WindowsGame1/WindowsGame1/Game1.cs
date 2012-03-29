@@ -24,6 +24,7 @@ namespace WindowsGame1
         Vector2 shipPosition = new Vector2(200, 200);
         Vector2 sunPosition = new Vector2(40, 90);
         Texture2D shipTexture, sunTexture;
+        float rotationAngle = 0.0f;
 
         public Game1()
         {
@@ -59,7 +60,6 @@ namespace WindowsGame1
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 this.Exit();
 
-            float rotationAngle = 0f;
             float elapsedTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
             float circle = MathHelper.Pi * 2;
             
