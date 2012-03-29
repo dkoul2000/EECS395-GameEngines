@@ -51,8 +51,6 @@ namespace WindowsGame1
 
         }
 
-        float rotationAngle = 0.0f;
-
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
@@ -61,20 +59,19 @@ namespace WindowsGame1
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 this.Exit();
 
-            //ship rotates left or right
+            float rotationAngle = 0f;
+            float elapsedTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            float circle = MathHelper.Pi * 2;
+            
             if (Keyboard.GetState().IsKeyDown(Keys.Right))
             {
-                float elapsedTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
                 rotationAngle += elapsedTime;
-                float circle = MathHelper.Pi * 2;
                 rotationAngle = rotationAngle % circle;
             }
 
             if (Keyboard.GetState().IsKeyDown(Keys.Left))
             {
-                float elapsedTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
                 rotationAngle -= elapsedTime;
-                float circle = MathHelper.Pi * 2;
                 rotationAngle = rotationAngle % circle;
             }
 
