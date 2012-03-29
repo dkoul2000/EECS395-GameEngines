@@ -78,6 +78,11 @@ namespace WindowsGame1
                 rotationAngle = rotationAngle % circle;
             }
 
+            if (Keyboard.GetState().IsKeyDown(Keys.Up))
+                shipPosition.X += 1f;
+            if (Keyboard.GetState().IsKeyDown(Keys.Down))
+                shipPosition.X -= 1f;
+
             base.Update(gameTime);
         }
 
