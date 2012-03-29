@@ -91,6 +91,11 @@ namespace WindowsGame1
                 shipPosition.Y -= shipFacingUnit.Y;
             }
 
+            Vector2 gravityVector = Vector2.Normalize(shipPosition - sunPosition);
+            gravityVector.X /= -2;
+            gravityVector.Y /= -2;
+            shipPosition += gravityVector;
+
             base.Update(gameTime);
         }
 
