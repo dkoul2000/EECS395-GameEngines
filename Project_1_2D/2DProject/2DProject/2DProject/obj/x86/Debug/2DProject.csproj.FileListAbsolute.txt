@@ -1,6 +1,0 @@
-C:\Users\Dhruv\Desktop\EECS395-GameEngines\2D_Project\2DProject\2DProject\2DProject\bin\x86\Debug\2DProject.exe
-C:\Users\Dhruv\Desktop\EECS395-GameEngines\2D_Project\2DProject\2DProject\2DProject\bin\x86\Debug\2DProject.pdb
-C:\Users\Dhruv\Desktop\EECS395-GameEngines\2D_Project\2DProject\2DProject\2DProject\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Dhruv\Desktop\EECS395-GameEngines\2D_Project\2DProject\2DProject\2DProject\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\Dhruv\Desktop\EECS395-GameEngines\2D_Project\2DProject\2DProject\2DProject\obj\x86\Debug\2DProject.exe
-C:\Users\Dhruv\Desktop\EECS395-GameEngines\2D_Project\2DProject\2DProject\2DProject\obj\x86\Debug\2DProject.pdb
