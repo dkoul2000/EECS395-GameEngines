@@ -1,0 +1,15 @@
+Kim, Ron and Rufus have been trapped by Dr Drakken in a factory. Now they must find the three hidden nachos so that Ron can burp their way to freedom. Use each of the character's hidden powers to unlock the secret nachos!
+
+  * Kim can fire pellets that dispel tornadoes. Beware! Running into a tornado will return the active character to the start position on the map
+  * Ron can fire-burp through walls
+  * Rufus can run on hamster wheels, illuminating hidden areas on the map
+
+Press enter to go past the intro screen.
+
+Press 1, 2, or 3 to cycle through characters.
+
+Use the arrow keys to move. The up key helps the character jump to the platform above the current one. 
+
+The spacebar will use each character's special power.
+
+Good luck beating the game!
